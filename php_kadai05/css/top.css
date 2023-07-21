@@ -1,0 +1,259 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+/* ここまでは書式のリセット */
+
+
+
+body{
+    margin: 0;
+}
+.thumbnailList {
+    width: 1200px;
+    margin: 90px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+div.thumbnail_box{
+    width: 280px;
+}
+
+div.titlebox{
+    margin-top: 10px;
+    font-family: "Quicksand";
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+
+a.titlelink{
+	text-decoration: none;
+	color: #18272F;
+	font-weight: 700;
+    position: relative;
+}
+
+a.titlelink::before {
+    content: '';
+    background-color:#A3C6C6;
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 100%;
+    height: 8px;
+    z-index: -1;
+    transition: all .3s ease-in-out;
+}
+
+a.titlelink:hover::before {
+    bottom: 0;
+    height: 100%;
+}
+
+div.commentbox{
+    font-family: "Quicksand";
+    font-size: 14px;
+    
+}
+
+div.navbar{
+    margin: 0 auto;
+    padding-left: 80px;
+    padding-right: 80px;
+    width: 1260px;
+    height: 60px;
+    margin-bottom: 30px;
+    background-color: #726F6E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    position: fixed;
+}
+
+div.log{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    height: 60px;
+    line-height: 60px;
+}
+
+div.login{
+    align-items: center;
+    height: 60px;
+    line-height: 60px;
+}
+
+div.logout{
+    align-items: center;
+    height: 60px;
+    line-height: 60px;
+}
+
+
+a.navlink{
+	text-decoration: none;
+	color: white;
+    font-family: "Quicksand";
+}
+
+div.jumbotron{
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 90px;
+}
+
+
+.jumbotron th{
+    text-align:left;
+    width:25%;
+    align-items: center;
+}
+.jumbotron td{
+    width:75%;
+}
+
+.jumbotron input:not(input[type="radio"]), .contact-form textarea{
+	width:100%;
+}
+.jumbotron input:not(input[type="radio"]){
+	height:35px;
+}
+.jumbotron textarea{
+	height:120px;
+}
+
+.jumbotron th{
+    padding:8px 0;
+    vertical-align:top;
+}
+
+
+img.fixedicon{
+	display: block;
+    position:fixed;
+    bottom:60px;
+    right:60px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+img.fixedicon:hover {
+    transform: scale(1.1);
+}
+
+.form-wrapper {
+    margin: 0 auto;
+    margin-top: 90px;
+    margin-bottom: 30px;
+    padding: 0 1em;
+    max-width: 400px;
+    height: 280px;
+    font-family: "Quicksand";
+    background-color: #726F6E;
+    color: white;
+    }
+    
+    h1 {
+    text-align: center;
+    padding: 1em 0;
+    font-size: 20px;
+    color: white;
+    }
+    
+    form {
+    padding: 0 1.5em;
+    }
+    
+    .form-item input:not(input[type="submit"]) {
+    border: none;
+    border-bottom: 2px solid #e9e9e9;
+    color: white;
+    font-family: 'Quicksand';
+    font-size: 1em;
+    height: 30px;
+    transition: border-color 0.3s;
+    width: 100%;
+    margin-bottom: 10px;
+    }
+
+    .form-item input[type="submit"] {
+        font-family: 'Quicksand';
+        font-size: 1em;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        }
+        
+    
+    .button-panel {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    }
+    
+    div.delete{
+        margin-top: 10px;
+    }
+
+    a.deletelink{
+        color: #726F6E;
+        text-decoration: none;
+        font-weight:bold;
+        display: inline-block;
+        transition:.3s;
+        transform: scale(1);
+        }
+        a.deletelink:hover{
+        font-weight:bold;
+        transform: scale(1.05);
+        }
